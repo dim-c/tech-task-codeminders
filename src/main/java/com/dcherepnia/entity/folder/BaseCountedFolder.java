@@ -11,7 +11,7 @@ abstract class BaseCountedFolder implements CountedFolder {
     private final String name;
     private final List<CountedFolder> subFolders = new ArrayList<>();
     private final List<CountedFile> countedFiles = new ArrayList<>();
-    AtomicLong linesCount = new AtomicLong(0);
+    final AtomicLong linesCount = new AtomicLong(0);
 
     BaseCountedFolder(String name) {
         this.name = name;
